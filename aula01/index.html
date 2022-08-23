@@ -4,10 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Curso TypeScript - aula 01</title>
   </head>
   <body>
-    <h1 id="title"></h1>
+    <main class="main-container">
+      <h1>Calculadora</h1>
+      <div id="container-resultado"></div>
+      <div class="inputs-container">
+        <input id="numero1" />
+
+        <input id="numero2" />
+      </div>
+      <div class="operadores-container">
+        <button class="operador-button" data-value="+">+</button>
+        <button class="operador-button" data-value="-">-</button>
+        <button class="operador-button" data-value="*">*</button>
+        <button class="operador-button" data-value="/">/</button>
+      </div>
+      <button id="calcular">Calcular</button>
+    </main>
+
     <script src="index.js"></script>
   </body>
 </html>
