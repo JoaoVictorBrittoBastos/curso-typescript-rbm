@@ -1,22 +1,21 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class Controller {
-    constructor(View, Model) {
+var Controller = /** @class */ (function () {
+    function Controller(View, Model) {
         this.View = View;
         this.Model = Model;
     }
-    addProductToList() {
+    Controller.prototype.addProductToList = function () {
         this.View.renderProduct();
-    }
-    generateUniqueId(products) {
-        const ids = products.map(function (product) {
+    };
+    Controller.prototype.generateUniqueId = function (products) {
+        var ids = products.map(function (product) {
             return product.id;
         });
-        const sortedIds = ids.sort(function (a, b) {
+        var sortedIds = ids.sort(function (a, b) {
             return a - b;
         });
-        const lastId = sortedIds[sortedIds.length - 1];
+        var lastId = sortedIds[sortedIds.length - 1];
         return lastId + 1;
-    }
-}
-exports.default = Controller;
+    };
+    return Controller;
+}());
+export default Controller;
