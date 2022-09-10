@@ -1,5 +1,6 @@
 {
   "name": "aula05",
+  "homepage": "lista-de-compras",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
