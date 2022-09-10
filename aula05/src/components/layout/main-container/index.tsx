@@ -7,5 +7,5 @@ type MainContainerProps = {
 };
 
 export default function MainContainer({ children }: MainContainerProps) {
-  return <div className="maincontainer__wrapper">{children}</div>;
+  return <main className="maincontainer__wrapper">{children}</main>;
 }
