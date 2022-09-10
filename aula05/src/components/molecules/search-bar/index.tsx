@@ -16,8 +16,10 @@ export default function SearchBar({ addItem }: SearchBarProps) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   function handleAdd() {
-    addItem({ description: inputRef.current!.value, done: false });
-    setInput("");
+    if (inputRef.current!.value) {
+      addItem({ description: inputRef.current!.value, done: false });
+      setInput("");
+    }
   }
 
   function keyupHandle(event: any) {
