@@ -13,7 +13,7 @@
   justify-content: center;
   font-size: 14px;
   transition: background-color 0.3s;
-  transition: font-size 0.2s;
+  transition: font-size 0.1s;
   outline: none;
 }
 
@@ -23,5 +23,5 @@
 
 .addbutton__button:active {
   background-color: #003a77;
-  font-size: 12px;
+  font-size: 15px;
 }
