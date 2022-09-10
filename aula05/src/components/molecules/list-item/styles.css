@@ -1,0 +1,24 @@
+.listitem__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.listitem__description__wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.listitem__description__wraper > label {
+  text-decoration: line-through;
+  color: red;
+}
+
+.listitem__removebutton {
+  border-radius: 8px;
+  color: red;
+  width: 36px;
+  height: 24px;
+  outline: none;
+  border: none;
+}
