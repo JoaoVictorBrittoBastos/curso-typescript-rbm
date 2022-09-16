@@ -5,29 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
-    <title>Sistema PDV</title>
+    <title>Aula 03</title>
   </head>
   <body>
-    <div>
-      <input placeholder="name" id="nameInput" />
-      <input placeholder="brand" id="brandInput" />
-      <input placeholder="price" id="priceInput" />
-      <input placeholder="category" id="categoryInput" />
-      <input placeholder="active" id="activeInput" />
-      <input placeholder="quantity" id="quantityInput" />
-      <button id="addButton">Add</button>
-
-      <ul id="product-list"></ul>
+    <div class="filter-wrapper">
+      <input placeholder="pesquisar" id="input-pesquisar" />
+      <select id="filter-type-select" value="marca">
+        <option value="marca">marca</option>
+        <option value="modelo">modelo</option>
+      </select>
+      <button id="search-button">buscar</button>
     </div>
+    <div id="root"></div>
     <script src="./scripts/index.js" type="module"></script>
   </body>
 </html>
-
-<!-- (alias) type Product = {
-    id: number;
-    name: string;
-    brand: string;
-    price: number;
-    category: string;
-    active: boolean;
-    quantity: number; -->
