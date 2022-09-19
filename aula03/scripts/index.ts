@@ -1,14 +1,14 @@
-type Blusa = { id: number; marca: string; modelo: string; preco: number };
+type Blusa = { id: number; raca: string; Nome: string; preco: number };
 
 const blusas = [
-  { id: 1, marca: "lacosta", modelo: "blusa do naruto", preco: 3.5 },
-  { id: 2, marca: "lafrente", modelo: "blusa do one piece", preco: 7.0 },
-  { id: 311, marca: "ardidas", modelo: "blusa do tokyo ghoul", preco: 12.5 },
-  { id: 4, marca: "puma", modelo: "blusa do jujutsu no kaizen", preco: 1.99 },
-  { id: 5, marca: "calvo cleide", modelo: "blusa do kimetsu no yaiba", preco: 1.99 },
-  { id: 6, marca: "pia", modelo: "blusa do boruto", preco: 1.99 },
-  { id: 21, marca: "cavalera", modelo: "blusa do cavalo de fogo", preco: 1.99 },
-  { id: 123, marca: "reserva", modelo: "blusa do cavalo de fogo azul", preco: 1.99 },
+  { id: 1, raca: "Canindé", Nome: "blusa do naruto", preco: 3.5 },
+  { id: 2, raca: "Moxotó", Nome: "blusa do one piece", preco: 7.0 },
+  { id: 311, raca: "Boer", Nome: "blusa do tokyo ghoul", preco: 12.5 },
+  { id: 4, raca: "Anglo Nubiana", Nome: "blusa do jujutsu no kaizen", preco: 1.99 },
+  { id: 5, raca: "BHUJ", Nome: "blusa do kimetsu no yaiba", preco: 1.99 },
+  { id: 6, raca: "Savanna", Nome: "blusa do boruto", preco: 1.99 },
+  { id: 21, raca: "Moxotó", Nome: "blusa do cavalo de fogo", preco: 1.99 },
+  { id: 123, raca: "Anglo Nubiana", Nome: "blusa do cavalo de fogo azul", preco: 1.99 },
 ];
 
 const rootElement = document.querySelector("#root");
@@ -22,8 +22,8 @@ function render(itens: Blusa[]) {
     itens.forEach((item) => {
       rootElement.innerHTML += `
       <div class="item-wrapper">
-        <h2>${item.modelo}</h2>
-        <h3>${item.marca}</h3>
+        <h2>${item.Nome}</h2>
+        <h3>${item.raca}</h3>
         <h4>${item.preco}</h4>
       </div>
     `;
@@ -33,7 +33,7 @@ function render(itens: Blusa[]) {
 
 function search() {
   const searchInputValue = (searchInputElement as HTMLInputElement).value;
-  const filterTypeValue = (searchTypeElement as HTMLSelectElement).value as "modelo" | "marca";
+  const filterTypeValue = (searchTypeElement as HTMLSelectElement).value as "Nome" | "raca";
   const newBlusas = blusas.filter((blusa) => blusa[filterTypeValue].includes(searchInputValue));
   render(newBlusas);
 }
