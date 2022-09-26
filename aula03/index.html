@@ -8,13 +8,28 @@
     <title>Aula 03</title>
   </head>
   <body>
-    <div class="filter-wrapper">
-      <input placeholder="pesquisar" id="input-pesquisar" />
-      <select id="filter-type-select" value="raca">
-        <option value="raca">raça</option>
-        <option value="Nome">Nome</option>
-      </select>
-      <button id="search-button">buscar</button>
+    <div>
+      <div class="filter-wrapper">
+        <div id="imagem-bd">
+          <img src="./imagens/bode.png" alt="icone bode" height="40px" width="40px">
+        </div>
+        <div id="nomesite">
+          <h1> Site do bodão </h1>
+        </div>
+        <input placeholder="pesquisar" id="input-pesquisar" />
+        <select id="filter-type-select" value="raca">
+          <option value="raca">raça</option>
+          <option value="Nome">Nome</option>
+        </select>
+        <select id="filter-price">
+          <option value="Nada" selected>Nenhum</option>
+          <option value="MenorPreco">Menor Preço</option>
+          <option value="MaiorPreco">Maior Preço</option>
+        </select>
+        <div id="div-button">
+        <button id="search-button">Buscar</button>
+        </div>
+      </div>
     </div>
     <div id="root"></div>
     <script src="./scripts/index.js" type="module"></script>

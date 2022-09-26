@@ -5,28 +5,81 @@
   gap: 12px;
   margin: auto;
   text-align: center;
+  justify-content: center;
 }
+#filter-price{
+  border-radius: 5px;
+}
+#input-pesquisar {
+  border-radius: 5px;
+}
+#search-button {
+  cursor: pointer;
+  font-family: sans-serif;
+  background-color: rgb(141, 141, 243);
+  border-radius: 5px;
+  padding: 5px;
+  width: 80px;
 
+}
+#div-button {
+  display: flex;
+  padding-left: 136px;
+}
+#imagem-bd {
+  display: flex;
+}
+#nomesite {
+  color: rgb(3, 3, 78);
+}
+html {
+  font-family: sans-serif;
+}
 body {
   margin: 0;
-  padding: 0;
+  background: linear-gradient(to right, #2900e0f1, rgb(0, 146, 204), rgb(6, 150, 37), rgb(173, 171, 4));
+  background-size: 300% 300%;
+  animation: cor 5s ease infinite;
 }
-
-.item-wrapper {
-  background-color: #e1e1e1;
+#filter-type-select{
+  border-radius: 5px;
+}
+.card {
+  /* padding-left: 50px; */
   width: 250px;
   height: 300px;
-  display: flex;
-  justify-content: center;
-  padding: 10px 0px;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 8px;
+  perspective: 700px;
+}
+.item-wrapper {
+  background-color: #604fff;
+  z-index: 1;
+  text-align: center;
 }
 
-.item-wrapper:hover {
-  transform: rotate3d("45deg");
-  transition: all 5s;
+.item-wrapper, .back {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition: 700ms;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+}
+.back {
+  background-color: rgb(88, 255, 130);
+  transform: rotateY(-180deg);
+  width: 100%;
+  height: 100%;
+}
+.card:hover .item-wrapper {
+  transform: rotateY(180deg);
+  z-index: 0;
+}
+.card:hover .back {
+  transform: rotateY(0deg);
+  z-index: 1;
 }
 
 .filter-wrapper {
@@ -36,8 +89,13 @@ body {
   align-items: center;
   height: 56px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  position: fixed;
+  background-color: rgba(88, 236, 255, 0.8);
+  
+}
+img{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  
 }
 
 .filter-wrapper > button {
@@ -48,3 +106,24 @@ body {
   width: 80px;
   height: 24px;
 }
+
+
+
+@keyframes cor {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/*
+.efeito {
+  width: 300px;
+  height: 300px;
+  border-radius: 50% ;
+  animation: aumentar 2s infinite;
+} */
